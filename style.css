@@ -1,0 +1,117 @@
+body{
+background-color: #dbe9ff;
+color: white;
+
+}
+
+
+h1 {
+  margin: auto;
+  width: 75%;
+  display: block;
+  padding: 50px;
+  /*text-align: center;*/
+  font: 25px helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans';
+}
+
+
+
+.date {
+  margin: auto;
+  width: 50%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 0;
+  text-align: center;
+  font: 25px helvetica, sans-serif;
+  font-family: 'Open Sans';
+}
+
+
+#month{
+  /*padding: 50px;*/
+  margin: 5px;
+  font: 15px helvetica, sans-serif;
+  font-family: 'Open Sans';
+}
+
+
+#day{
+  /*padding: 50px;*/
+  margin: 5px;
+  font: 15px helvetica, sans-serif;
+  font-family: 'Open Sans';
+}
+
+#submit{
+  /*padding: 50px;*/
+  margin: 25px;
+
+}
+
+#refresh{
+  /*padding: 50px;*/
+  margin: 25px;
+}
+
+body {
+	width: 100wh;
+	height: 90vh;
+	/*color: #fff;*/
+	background: linear-gradient(45deg, #f78f27, #6a8af2, #ffe349, #cb49ff);
+	background-size: 200% 200%;
+	-webkit-animation: Gradient 7s ease infinite;
+	-moz-animation: Gradient 7s ease infinite;
+	animation: Gradient 7s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+h6 {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	right: 0;
+	left: 0;
+}

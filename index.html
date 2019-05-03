@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Image Gallery">
+		<meta name="keywords" content="Image Gallery">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+		<title>Number Facts</title>
+
+  </head>
+<body>
+
+
+
+<div class="date">
+
+	<h1>Enter a date of your choice!</h1>
+  <!-- <form action="/action_page.php"> -->
+
+  Month: <input type="text" id='month' placeholder="March" >
+    <!-- <input type="submit" value="Submit"> -->
+
+  Day: <input type="text" id='day' placeholder="1" ><br>
+      <input type="submit" id='submit' value="Submit" onClick='display()'>
+	<div id='resp'></div>
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" id='refresh' width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs" onClick='location.reload()'> <path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"/></svg>
+</div>
+
+
+</body>
+</html>
+
+<script>
+var months = {'january': 1,'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6, 'july': 7, 'august': 8, 'september': 9, 'october': 10, 'november': 11, 'december': 12 }
+
+function display(){
+var month = document.getElementById('month').value
+month = month.toLowerCase()
+console.log(month)
+var day = document.getElementById('day').value
+if(!month || !day){
+	document.getElementById('resp').innerHTML = 'Please enter a month and day!'
+	return
+}
+month = months[month]
+    fetch(`http://numbersapi.com/${month}/${day}/date`)
+      .then(function(response) {
+			
+				if(response.ok)  {
+				return response.text();
+				}
+				else{
+					return 'Please enter a month and day!'
+				}
+
+      })
+      .then(function(myJson) {
+			document.getElementById('resp').innerHTML = myJson
+      });
+}
+
+
+</script>
