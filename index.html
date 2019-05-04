@@ -48,7 +48,7 @@ if(!month || !day){
 	return
 }
 month = months[month]
-    fetch(`httpi://numbersapi.com/${month}/${day}/date`)
+    fetch(`https://numbersapi.com/${month}/${day}/date`)
       .then(function(response) {
 			
 				if(response.ok)  {
