@@ -17,7 +17,7 @@
 
 <div class="date">
 
-	<h1>Enter a date of your choice!</h1>
+	<h1>Enter a date of your choice <br>to get a random fact!</h1>
   <!-- <form action="/action_page.php"> -->
 
   Month: <input type="text" id='month' placeholder="March" >
@@ -26,12 +26,14 @@
   Day: <input type="text" id='day' placeholder="1" ><br>
       <input type="submit" id='submit' value="Submit" onClick='display()'>
 	<div id='resp'></div>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_w9em"></div>
 
-
-	<svg xmlns="http://www.w3.org/2000/svg" id='refresh' width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs" onClick='location.reload()'> <path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"/></svg>
+	<svg xmlns="http://www.w3.org/2000/svg" id='refresh' width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs" onClick='location.reload()'> <path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"></svg>
 </div>
 
 
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd198a28f2d32d6"></script>
 </body>
 </html>
 
@@ -48,7 +50,7 @@ if(!month || !day){
 	return
 }
 month = months[month]
-    fetch(`https://numbersapi.com/${month}/${day}/date`)
+    fetch(`http://numbersapi.com/${month}/${day}/date`)
       .then(function(response) {
 
 				if(response.ok)  {

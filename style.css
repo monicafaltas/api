@@ -1,6 +1,6 @@
 body{
 background-color: #dbe9ff;
-color: white;
+color: black;
 
 }
 
@@ -50,6 +50,13 @@ h1 {
 #submit{
   /*padding: 50px;*/
   margin: 25px;
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  font: 20px helvetica, sans-serif;
+  font-family: 'Open Sans';
+  border-color: white;
 
 }
 
